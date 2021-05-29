@@ -58,8 +58,10 @@ cover/
 # Django stuff:
 *.log
 local_settings.py
-db.sqlite3
-db.sqlite3-journal
+# We can use sqlite3 for the purpose of the hackthon as it's simple and can be exported easly on the server
+
+# db.sqlite3
+# db.sqlite3-journal
 
 # Flask stuff:
 instance/
