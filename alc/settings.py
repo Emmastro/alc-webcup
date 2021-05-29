@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-iokk=v^jh%^#+myx7rhqa(4b8e$!a---=ix0uvogjh3fzp!=v6'
+SECRET_KEY = os.getenv('SECRETE_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -80,7 +80,7 @@ if os.getenv('HOSTING') == 'local':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': 'db.sqlite',
+            'NAME': 'db.sqlite3',
         }
     }
 else:
