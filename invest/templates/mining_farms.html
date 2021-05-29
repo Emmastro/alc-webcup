@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% include 'head.html' %}
+</head>
+
+<body>
+
+  <section class="colored-section" id="title">
+    <div class="container-fluid">
+      {% include 'menu.html' %}
+    </div>
+
+  </section>
+
+  <!-- Latest news section -->
+  <section class="news-section bg-light">
+    <div class="container mt-2">
+      <!--   <div class="card card-block mb-2">
+    <h4 class="card-title">Card 1</h4>
+    <p class="card-text">Welcom to bootstrap card styles</p>
+    <a href="#" class="btn btn-primary">Submit</a>
+  </div>   -->
+
+    
+      <div class="row">
+        <h2>Mining Farms in our network</h2>
+    {%for farm in farms%}
+        
+        <div class="col-lg-3 col-md-6 col-sm-12 item">
+          <div class="card item-card card-block">
+            <img src="/media/{{farm.logo}}" alt="Photo of sunset">
+            <h5 class="item-card-title mt-3 mb-3">{{farm.farm_name}}</h5>
+            <p class="card-text">{{farm.description}}</p>
+            <b>Investment ptions</b>
+            <lu>
+            {%for option in farm.investment_options.all%}
+                <li>{{option}}</li>
+            {%endfor%}
+            </lu>
+            <a type="button" href="mining_farms/{{farm.id}}" class="btn btn-dark btn-lg">Invest</a>
+          </div>
+        </div>
+    {%endfor%}    
+    
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer class="bg-dark footer-section" id="footer">
+
+    <p>© Copyright 2021 CryptInvest</p>
+
+  </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% include 'head.html' %}
+</head>
+
+<body>
+
+  <section class="colored-section" id="title">
+    <div class="container-fluid">
+      {% include 'menu.html' %}
+  </section>
+
+  <!-- farm profile section -->
+  <section class="farm-profile-section bg-dark">
+    <div class="row padded-container">
+      <div class="col-lg-6 col-sm-12t">
+          <img class="farm-profile-image" src="images/crypt.png" alt="cryptocurrency">
+        </div>
+        <div class="col-lg-6 col-sm-12 text-left">
+          <h3>Mining Farm 1</h3>
+          <p>Some information and short summary about the mining farm. Some information and short summary about the mining farm. Some information and short summary about the mining farm.</p>
+        </div>
+    </div>
+
+  </section>
+
+  <!-- Investment options -->
+  <section class="investment-options-section bg-light">
+    <div class="container-fluid">
+      <h4>Here are Our Investment Options</h4>
+      <form class="investment-options-form" action="index.html" method="post">
+        <p>
+        <input type="radio" id="investment-options" name="option1" value="buy">
+        <strong>Buy Crypto:</strong> Option - Starting at 2000 MUR</p>
+        <p>
+        <input type="radio" id="investment-options" name="option1" value="buy">
+        <strong>Crowdlending:</strong> Option - Starting at 20,000 MUR</p>
+        <button type="button" class="btn btn-dark btn-lg">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+
+  <footer class="bg-dark footer-section" id="footer">
+
+    <p>© Copyright 2021 CryptInvest</p>
+
+  </footer>
+
+
+</body>
+
+</html>

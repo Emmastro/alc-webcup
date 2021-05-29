@@ -20,6 +20,7 @@ class Investor(User):
     bio = models.TextField(null=True)
     avatar = models.ImageField(upload_to="mining_farm/logo", null=True, blank=True)
     investment = models.ManyToManyField(Investment)
+    contact_number = models.CharField(blank=True, max_length=100)
 
     def avatar_url(self):
         """
