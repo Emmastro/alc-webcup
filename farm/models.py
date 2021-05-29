@@ -19,6 +19,7 @@ class MiningFarm(User):
     The account gives them access to the admin dashboard, with privilege for editing their profile and
     Managing people who signup for investing to their farm, the investment option and other relevant details
     """
+    farm_name = models.CharField(null=True, max_length=128)
     description = models.TextField(null=True)
     logo = models.ImageField(upload_to="mining_farm/logo", null=True, blank=True)
     investment_options = models.ManyToManyField(InvestmentOption)

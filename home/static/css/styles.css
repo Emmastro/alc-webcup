@@ -1,0 +1,202 @@
+body {
+  font-family: "Montserrat", "sans-serif";
+  font-weight: 400;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5,h6 {
+  font-weight: 700;
+}
+
+/* Containers */
+.container-fluid {
+  padding: 2% 0 0 0;
+}
+
+.padded-container {
+  padding: 5%;
+}
+
+.navbar {
+  margin: 0;
+}
+
+.farm-profile-div {
+  width: 50%;
+  margin: 100px auto;
+  text-align: left;
+}
+
+/* TEXTS */
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+/* Headings */
+.big-heading {
+  text-align: left;
+}
+
+.h2-heading-main {
+  text-align: left;
+  margin: 1% 0;
+}
+
+.h2-heading {
+  text-align: center;
+  padding: 2% 0;
+}
+
+/* Buttons */
+.get-started-button-main {
+  float: left;
+  margin: 5% 5% 2% 0;
+}
+
+/* Images */
+.title-main-image {
+  width: 60%;
+}
+
+.card-img-top {
+  overflow: hidden;
+}
+
+.farm-profile-image {
+  width: 25%;
+  float: left;
+  margin-right: 30px;
+}
+
+.testimonial-text {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.testimonial-image {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+/* Section */
+.how-works-section {
+  padding: 5%;
+  color: white;
+}
+
+.features {
+  padding: 2%;
+}
+
+.feature-item {
+  padding: 0%;
+}
+
+.testimonials-section {
+  color: white;
+}
+
+.footer-section {
+  color: white;
+  padding:2%;
+  margin-bottom: 0;
+}
+
+.news-section {
+  padding: 5%;
+}
+
+.farm-profile-section {
+  color: white;
+  margin-top: 0;
+}
+
+/* REGISTRATION FORM */
+.wrapper {
+	margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.form-signin {
+  max-width: 40%;
+  padding: 5%;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+
+  .form-signin-heading,
+	.checkbox {
+	  margin-bottom: 3%;
+	}
+
+	.checkbox {
+	  font-weight: normal;
+	}
+
+	.form-control {
+	  position: relative;
+	  font-size: 1rem;
+	  height: auto;
+	  padding: 2%;
+	  box-sizing: border-box;
+	}
+
+  /* CARDS */
+.card img{
+  height:150px;
+  width:100%;
+}
+
+.item{
+  padding-left:5px;
+  padding-right:5px;
+}
+.item-card{
+  transition:0.5s;
+  cursor:pointer;
+}
+.item-card-title{
+  font-size:15px;
+  transition:1s;
+  cursor:pointer;
+}
+
+.card-title i:hover{
+  transform: scale(1.25) rotate(100deg);
+  color:#18d4ca;
+
+}
+.card:hover{
+  transform: scale(1.05);
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+}
+.card-text{
+  height:80px;
+}
+
+.card::before, .card::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scale3d(0, 0, 1);
+  transition: transform .3s ease-out 0s;
+  background: rgba(255, 255, 255, 0.1);
+  content: '';
+  pointer-events: none;
+}
+.card::before {
+  transform-origin: left top;
+}
+.card::after {
+  transform-origin: right bottom;
+}
+.card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+  transform: scale3d(1, 1, 1);
+}
