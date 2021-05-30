@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% include 'head.html' %}
+</head>
+
+<body class="bg-light">
+
+  <section class="colored-section" id="title">
+    <div class="container-fluid">
+
+        {% include 'menu.html' %}
+    </div>
+  </section>
+
+  <!-- login form -->
+  <div class="wrapper">
+    {% block content %}
+    {% endblock content %}
+ </div>
+  <!-- end login form -->
+
+  <!-- Footer -->
+
+  <footer class="bg-dark footer-section" id="footer">
+
+      <p>© Copyright 2021 CryptInvest</p>
+
+  </footer>
+
+</body>
+
+</html>
+
+
+

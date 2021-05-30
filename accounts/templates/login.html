@@ -1,0 +1,46 @@
+{% extends 'base1.html' %}
+
+{% block content %}
+
+<div class="text-center">
+    <h4 class="text-dark mb-4">Welcome {% block back %}{% endblock back %} to CryptConnectors</h4>
+    {% if form.errors and not form.non_field_errors %}
+    <p class="errornote">
+    {% if form.errors.items|length == 1 %}Please correct the error below.{% else %}Please correct the errors below.{% endif %}
+    </p>
+    {% endif %}
+
+    {% if form.non_field_errors %}
+    {% for error in form.non_field_errors %}
+    <p class="errornote">
+        {{ error }}
+    </p>
+    {% endfor %}
+    {% endif %}
+
+    <div id="content-main">
+
+    {% if user.is_authenticated %}
+    <p class="errornote">
+        You are authenticated as {{ username }}, but are not authorized to
+        access this page. Would you like to login to a different account?
+    </p>
+    {% endif %}
+</div>
+
+<form class="form-signin"  method="POST" action={%url 'login'%}>
+    {% csrf_token %}
+    <h2 class="form-signin-heading">Login Here</h2>
+    <span>{{ form.username.errors }}</span>
+    <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
+    <input type="password" class="form-control" name="password" placeholder="Password" required=""/>
+    <br>
+    <label class="checkbox">
+      <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+    </label><br>
+    <button class="btn btn-lg btn-dark btn-block" type="submit">Login</button>
+    <p>Don't have an account yet? <a href={%url 'register'%}>Create here!</a></p>
+  </form>
+ 
+{% endblock content %}
+

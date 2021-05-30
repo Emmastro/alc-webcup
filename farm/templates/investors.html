@@ -17,7 +17,7 @@
   <section class="farm-profile-section bg-dark">
     <div class="row padded-container">
       <div class="col-lg-12 col-sm-12 text-left">
-        <h3>Mining Farm 1</h3>
+        <h3>{{user.farm_name}}</h3>
         <p>List of current investors in the Farm.</p>
       </div>
     </div>
@@ -28,10 +28,24 @@
   <section class="investment-options-section bg-light">
     <div class="container-fluid">
       <h4>Current Investors</h4>
+      {%for investor in investors%}}
       <div class="card">
         <div class="card-body text-left">
           <h5 class="card-title">Person Name</h5>
-          <p class="card-text">400,000 MUR</p>
+          <p class="card-text">400,000 MUR?</p>
+        </div>
+      </div>
+      {%endfor%}
+      <div class="card">
+        <div class="card-body text-left">
+          <h5 class="card-title">Investor name1</h5>
+          <p class="card-text">400,000 MUR?</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body text-left">
+          <h5 class="card-title">Investor name2</h5>
+          <p class="card-text">400,000 MUR?</p>
         </div>
       </div>
     </div>
@@ -41,7 +55,7 @@
 
   <footer class="bg-dark footer-section" id="footer">
 
-    <p>© Copyright 2021 CryptInvest</p>
+    <p>© Copyright 2021 CryptConnectors</p>
 
   </footer>
 
