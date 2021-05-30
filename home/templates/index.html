@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cryptoconnect</title>
+</head>
+<body>
+    <ul id="talk"></ul>
+    <form method="POST" id="post-form">
+    {% csrf_token %}
+    <div class="fieldWrapper" id="the_post">
+        {{ form.text }}
+    </div>
+    <div id="results"></div> <!-- errors go here -->
+    <input type="submit" value="Post" class="tiny button">
+</form>
+</body>
+    <script src="static/scripts/main.js"></script>
+</html>
